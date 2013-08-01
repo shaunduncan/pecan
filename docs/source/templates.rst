@@ -31,6 +31,14 @@ configuration::
         # ...
     }
 
+You must also add this to the ``make_app`` call in your app.py::
+
+    return make_app(
+        ...
+        default_renderer=config.app.default_renderer,
+        ...
+    )
+
 
 Using Template Renderers
 ------------------------
